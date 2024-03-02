@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="stylesheet " href="/static/calc1.css"> 
+</head>
+<body style="background:url('/static/calc1.png');margin:0; background-size:cover; " >
+    <nav id="nav" style="background-color:silver;height:50px;">
+        <div id="div">
+            <ul id="ul">
+                <li>hello {{name}}</li>
+                <li><a href="http://localhost:8000/loginpage/" style="font-size:20px; color:rgb(25, 51, 144)"><b>Home</b></a></li>
+                <li><a href="#" style="font-size:20px;color:black"><b>About</b></a></li>
+                <li><a href="#" style="font-size:20px;color:rgb(0, 139, 65)"><b>Contact Us</b></a></li>
+            </ul>
+        </div>
+        </nav>
+        
+            <div id="container" style="border-radius:20%;">
+            <form class="form" style="background:rgb(0, 0, 0);opacity:1;">
+                <div style="width:80%;margin-left:10%;">
+                    <input type="text" name="display" style="height:50px;width:100%;" id="display" placeholder="Enter any value">
+                </div>
+
+                <div class="hide">
+                    <button value="pow" type="button" style="margin-left:1px;"  onclick="pow()"><sup>x<sup>2</sup></button>
+                    <button value="AC" type="button" style="margin-left:1px;"  id="mod">M</button>
+                    <button value="sin" type="button" style="margin-left:1px;" onclick="sin()">Sin</button>
+                    <button  value="cos" type="button" style="margin-right:10px;" onclick="cos()">Cos</button>
+                    <button value="tan" type="button" style="margin-right:10px;" onclick="tan()" >Tan</button>
+                  
+                </div> 
+                <div>
+                   <button value="AC" type="button" style="margin-left:1px;" onclick="sqrt()" class="hide">&radic;x</button>
+                    <button value="AC" type="button" style="margin-left:1px;" onclick="display.value=' '">AC</button>
+                    <button  value="C" type="button" style="margin-right:10px;" onclick="clean()">C</button>
+                    <button value="%" type="button" style="margin-right:10px;" onclick="display.value+='%'">%</button>
+                    <button value="/" type="button" style="margin-right:10px;" onclick="display.value+='/'">/</button>
+                </div>
+                <div>
+                    <button value="AC" type="button" style="margin-left:1px;" onclick="log()" class="hide">log</button>
+                    <button type="button"  value="7" onclick="display.value+='7' " style="color:black">7</button>
+                    <button value="8" type="button" onclick="display.value+='8'" style="color:black">8</button>
+                    <button value="9" type="button" onclick="display.value+='9'" style="color:black">9</button>
+                    <button type="button" value="*" onclick="display.value+='*'">*</button>
+                </div>
+                <div>
+                    <button value="AC" type="button" style="margin-left:1px;" onclick="fact()" class="hide">x!</button>
+                    <button type="button" value="4" onclick="display.value+='4'" style="color:black">4</button>
+                    <button  type="button" value="5" onclick="display.value+='5'" style="color:black">5</button>
+                    <button  type="button" value="6" onclick="display.value+='6'" style="color:black">6</button>
+                    <button type="button" value="-" onclick="display.value+='-'">-</button>
+                </div>
+                <div>
+                    <button value="deg" type="button" style="margin-right:10px;" onclick="display.value+='3.14'" class="hide">&pi;</button>
+                    <button name="1" value="1" type="button" onclick="display.value+='1'" style="color:black">1</button>
+                    <button name="2" value="2" type="button" onclick="display.value+='2'" style="color:black">2</button>
+                    <button name="3" value="3" type="button" onclick="display.value+='3'" style="color:black">3</button>
+                    <button name="+" value="+" type="button" onclick="display.value+='+'">+</button>
+                </div>
+                <div>
+                    <button value="R" value="R" type="button" onclick=" scientific()">R</button>
+                    <button value="AC" type="button" style="margin-left:1px;color:black" onclick="display.value='2.718'" class="hide">e</button>                    
+                    <button name="0" value="0" type="button" onclick="display.value+='0'" style="color:black">0</button>
+                    <button name="." value="." type="button" onclick="display.value+='.'" style="color:black">.</button>
+                    <button value="=" name="2"  type="button" onclick="calculation()" style="background-color:coral;color:white" >=</button>
+                </div>
+            </form>
+    </div>
+<script src="/static/calc1.js"></script>
+</body>
+</html>

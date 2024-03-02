@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background:linear-gradient(to right,black,white);
+            }
+            button{
+                background-color: #1ff426;
+                width: 100px;
+                padding: 15px;
+                margin-left:40px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form{
+
+                width:100%;
+                border-radius: 20px;
+                background-color: greenyellow;
+            }
+            input[type=email],input[type=password]
+            {
+                width: 200px;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid blue;
+                box-sizing: border-box;
+                border-radius: 20px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+                border-radius: 10px;
+            } 
+            button
+            {
+                background-color: rgb(47, 18, 196);
+                border-radius: 20px;
+            }
+            input:hover
+            {
+                background-color: rgb(192, 195, 255);
+            }
+            #nav
+            {
+                height:10px;
+                width:100%;
+                float:left;
+            }
+ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-left:100px;
+}
+.contain
+{
+    width:450px;
+    margin-left: 35%;
+    border-radius:10px;
+    background-color: transparent;
+}
+        </style>
+    </head>
+    <body>
+       <!-- <nav id="nav">
+            <div id="div">
+                <ul id="ul">
+                    <li><a href="#" style="font-size:20px;">Home</a></li>
+                    <li><a href="#" style="font-size:20px;">About</a></li>
+                    <li><a href="#" style="font-size:20px;">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>-->
+        <div class="contain">
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><h1 style="margin-top:100px;">Login Form</h1></center>
+            <center><div class="container">
+                <label for ='email'><b>UserEmail :  </b></label>
+                <input type="email" placeholder="Enter email" name="email" float="right"  required><br>  
+                <label for='password'><b>Password : </b></label>
+                <input type="password" placeholder="Enter Password" name="password" required><br>  
+                <button type="submit"><b>Login</b></button><br>     
+                Don't have accounct <a href="http://localhost:8000/signuppage/"> register </a>
+            </div></center>
+        </div>
+        </form>
+    </body>
+</html>

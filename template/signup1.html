@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Signup Page</title>
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background:linear-gradient(to right,black,white);
+            }
+            button{
+                background-color: #4CAF50;
+                width: 25%;
+                padding: 15px;
+                color: black;
+                border: none;
+                float: center;
+                font-size: 15px;
+            }
+            label{
+                font-size: 20px;
+            }
+            form
+            {
+                border-radius:10px;                
+            }
+            input[type=email],input[type=text]{
+                width: 50%;
+                font-size: 15px;
+                margin: 8px 0px;
+                padding: 12px 20px;
+                display: inline-block;
+                border: 2px solid;
+                box-sizing: border-box;
+                border-radius: 20px;
+            }
+            button:hover{
+                opacity:0.7;
+
+            }
+            .container{
+                padding: 50px;
+                background-color: white;
+                border-radius:10px;
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+              
+            img.avatar {
+                width: 10%;
+                border-radius: 50%;
+            }  
+            button
+            {
+                background-color: blue;
+                border-radius: 20px;
+            }
+            input:hover
+            {
+                background-color:pink;
+            }
+            .contain
+            {
+                margin-left:40%;
+                width:500px;
+                background-color:linear-gradient(to right ,black,white);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="contain"> 
+        <form action="#" method="post">
+            {% csrf_token %}
+            {% load static %}
+            <center><h1>Register From</h1></center>
+            <center><div class="container">
+                <label for='first_name'><b>First Name : </b></label>
+		        <input type='text' placeholder="Enter your first name" name='first_name' required><br>
+		        <label for='last_name'><b>Last Name :</b></label>
+		        <input type='text' placeholder='Enter your last name' name='last_name' required><br>
+            	<label for ='email' class="email"><b>Email Id :  </b></label>
+            	<input type="email" placeholder="Enter email" name="email" float="right" style="margin-left:20px" required><br>  
+            	<label for='password'><b>Password : </b></label>
+            	<input type="text" placeholder="Enter Password" name="password" required><br>  
+            	<button type="submit" class="btn"><b>Signup</b></button><br>     
+            	Already an accounct <a href="http://localhost:8000/loginpage/"> Login </a>
+            </div></center>
+        </form>
+        </div>
+    </body>
+</html>
