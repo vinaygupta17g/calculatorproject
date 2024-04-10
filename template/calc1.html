@@ -6,6 +6,22 @@
     <title>Calculater</title>
     <link rel="stylesheet " href="/static/calc1.css">
     <script src="https://kit.fontawesome.com/df95116d29.js" crossorigin="anonymous"></script> 
+    <style>
+        button
+        {
+            height:45px;
+            width:45px;
+        }
+        #btod
+        {
+            width:50%;
+            margin-left:0px;
+            border-radius: 20px;
+            font-size:20px;
+            background-color: rgb(22, 22, 185);
+            color:white;
+        }
+    </style>
 </head>
 <body style="background:url('/static/c.jpg');margin:0; background-size:cover; " >
     <nav id="nav" style="background-color:silver;height:50px;">
@@ -23,6 +39,12 @@
             <form class="form" style="background:rgb(0, 0, 0);opacity:1;">
                 <div style="width:80%;margin-left:10%;">
                     <input type="text" name="display" style="height:50px;width:100%;" id="display" placeholder="Enter any value">
+                </div>
+                <div class="hide">
+                    <button id="btod" onclick="binarytodecimal(display.value)" value="binary" type="button">
+                        binary-decimal
+                    </button>
+                    <button id="btod" style="margin-left:20px;">Decimal-binary</button>
                 </div>
 
                 <div class="hide">
@@ -71,5 +93,21 @@
             </form>
     </div>
 <script src="/static/calc1.js"></script>
+<script>
+    function binarytodecimal(binary)
+{
+    let decimal=0
+    console.log(binary)
+    let a=0
+    while(binary>0)
+    {
+        let rem=Math.trunc(binary%10);
+        decimal=decimal+(rem*Math.pow(2,a));
+        binary=binary/10;
+        a++;
+    }
+    display.value=decimal;
+}
+</script>
 </body>
 </html>
